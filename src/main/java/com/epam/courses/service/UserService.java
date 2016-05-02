@@ -14,8 +14,6 @@ public class UserService {
 
     @Transactional
     public User getUser(final Integer id) {
-        User u = userDao.getUser(id);
-        System.out.println(u);
-        return u;
+        return userDao.getUser(id);
     }
 }

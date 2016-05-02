@@ -12,6 +12,6 @@ public class UserDao {
     private SessionFactory sessionFactory;
 
     public User getUser(final Integer id) {
-        return (User) sessionFactory.openSession().load(User.class, id);
+        return sessionFactory.openSession().load(User.class, id);
     }
 }
