@@ -14,7 +14,7 @@ public class UserController {
     private UserService userService;
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    public User getUser(@PathVariable Integer id) {
+    public User getUser(@PathVariable(value = "id") Integer id) {
         return userService.getUser(id);
     }
 }
